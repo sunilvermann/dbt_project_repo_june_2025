@@ -1,0 +1,9 @@
+WITH SOURCE AS (
+    SELECT * FROM {{ source('raw_src', 'PRODUCTS') }}
+)
+SELECT 
+    ID AS PRODUCT_ID,
+	NAME,
+	CATEGORY,
+	PRICE
+FROM SOURCE    

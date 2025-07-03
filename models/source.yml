@@ -1,0 +1,12 @@
+version: 2
+sources:
+  - name: raw_src # this is the source_name
+    database: SALES_DB  # this is DB name
+    schema: RAW_SCHEMA  # this is schema name
+
+    tables:
+      - name: CUSTOMER # this is the table_name
+      - name: ORDERS
+      - name: ORDER_ITEMS
+      - name: PAYMENTS
+      - name: PRODUCTS
