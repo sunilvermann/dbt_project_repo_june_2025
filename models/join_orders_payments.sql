@@ -1,10 +1,11 @@
--- Join the orders and payments table
-/* SELECT o.* FROM {{ source('raw_src', 'ORDERS') }} o
-INNER JOIN {{ source('raw_src', 'PAYMENTS') }} p
-ON o.ID = p.ID */
+{# Join the orders and payments table
+ SELECT o.* FROM {{ source('raw_src', 'ORDERS') }} o
+  INNER JOIN {{ source('raw_src', 'PAYMENTS') }} p
+  ON o.ID = p.ID 
 
 -- OR 
--- Here we refers the stg_orders and stg_payments models and join them
+-- Here we refers the stg_orders and stg_payments models and join them 
+#}
 WITH ORDERS
       AS (SELECT * FROM {{ ref('stg_orders') }}),
       PAYMENTS 
