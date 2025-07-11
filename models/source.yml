@@ -5,7 +5,7 @@ sources:
     schema: RAW_SCHEMA  # this is schema name
 
     tables:
-      - name: CUSTOMER # this is the table_name
+      - name: CUSTOMER # this is the table_name       
       - name: ORDERS
       - name: ORDER_ITEMS
       - name: PAYMENTS

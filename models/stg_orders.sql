@@ -1,13 +1,3 @@
-WITH SOURCE AS (
-SELECT * FROM
-{{ source('raw_src', 'ORDERS') }})
 
-SELECT 
-     ID AS ORDER_ID,
-	CUSTOMER_ID,
-	STATUS,
-	ORDER_DATE,
-	TOTAL_AMOUNT,
-	CREATED_AT,
-	UPDATED_AT
-FROM SOURCE    
+SELECT * FROM {{ source('raw_src', 'ORDERS') }}
+

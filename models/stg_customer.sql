@@ -1,8 +1,14 @@
+{{
+    config(
+        materialized='view'
+    )
+}}
+
 WITH SOURCE AS (
     SELECT * FROM {{ source('raw_src', 'CUSTOMER') }}
 )
 SELECT 
-ID AS CUST_ID,
+ID AS CUSTOMER_ID,
 	NAME CUST_NAME,
 	EMAIL CUST_EMAIL,
 	REGION ,
