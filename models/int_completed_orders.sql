@@ -1,3 +1,8 @@
+{{
+    config(
+        materialized='ephemeral'
+    )
+}}
 select
     id as order_id,
     to_date(created_at) as order_date,
