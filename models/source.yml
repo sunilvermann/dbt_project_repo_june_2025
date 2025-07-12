@@ -10,3 +10,4 @@ sources:
       - name: ORDER_ITEMS
       - name: PAYMENTS
       - name: PRODUCTS
+      - name: TRANSACTIONS
